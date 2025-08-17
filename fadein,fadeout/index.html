@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Animation Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>UI Animation Showcase</h1>
+  
+  <div id="animatedBox" class="box fade-in">
+    Hello
+  </div>
+
+  <div class="button-group">
+    <button onclick="animateBox('fade-in')">Fade In</button>
+    <button onclick="animateBox('fade-out')">Fade Out</button>
+    <button onclick="animateBox('slide-in-up')">Slide In Up</button>
+    <button onclick="animateBox('slide-out-down')">Slide Out Down</button>
+    <button onclick="animateBox('scale-up')">Scale Up</button>
+    <button onclick="animateBox('scale-down')">Scale Down</button>
+    <button onclick="animateBox('glow-pulse')">Glow Pulse</button>
+  </div>
+
+  <script>
+    const box = document.getElementById('animatedBox');
+    const animations = [
+      'fade-in',
+      'fade-out',
+      'slide-in-up',
+      'slide-out-down',
+      'scale-up',
+      'scale-down',
+      'glow-pulse'
+    ];
+
+    function animateBox(animationClass) {
+      box.className = `box ${animationClass}`;
+    }
+
+    // Auto-run animations every 2 seconds
+    let index = 0;
+    setInterval(() => {
+      animateBox(animations[index]);
+      index = (index + 1) % animations.length;
+    }, 2000);
+  </script>
+
+</body>
+</html>
+

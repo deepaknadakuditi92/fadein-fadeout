@@ -1,0 +1,115 @@
+/* General Page Style */
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Box Style */
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #ff0066, #00ffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+/* Button Styling */
+.button-group {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background: #00ffff;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  margin: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #ff0066;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Fade In / Fade Out */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.fade-out {
+  animation: fadeOut 0.8s ease-out forwards;
+}
+
+/* Slide In / Slide Out */
+@keyframes slideInUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+@keyframes slideOutDown {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(100px); opacity: 0; }
+}
+.slide-out-down {
+  animation: slideOutDown 0.8s ease-in forwards;
+}
+
+/* Scale Up / Scale Down */
+@keyframes scaleUp {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.scale-up {
+  animation: scaleUp 0.5s ease-out forwards;
+}
+
+@keyframes scaleDown {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.5); opacity: 0; }
+}
+.scale-down {
+  animation: scaleDown 0.5s ease-in forwards;
+}
+
+/* Glow Pulse */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 5px #00ffff; }
+  50% { box-shadow: 0 0 20px #00ffff; }
+  100% { box-shadow: 0 0 5px #00ffff; }
+}
+.glow-pulse {
+  animation: glowPulse 1.2s infinite alternate;
+}
+
